@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Happy 25th Anniversary — Mom & Dad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="/public/sample.png">Mom & Dad • 25</a>
+    </nav>
+  </header>
+
+  <main id="app">
+    <section id="hero" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content container">
+        <h1 class="hero-title">Happy 25th Anniversary, Mom & Dad ❤️</h1>
+        <p class="hero-sub">Twenty-five years of love, laughter, and beautiful memories.</p>
+        <div class="hero-ctas">
+          <a href="gallery.html" class="btn btn-primary">View Our Memories</a>
+         
+        </div>
+      </div>
+      <canvas id="particles" class="particles"></canvas>
+    </section>
+
+  
+    <section id="letter" class="section letter container">
+      <h2 class="section-title">A Letter</h2>
+      <article class="letter-card">
+        <div class="letter-content" id="letter-content">
+          <p>Dear Mom & Dad,</p>
+          <p>
+
+Happy Anniversary to the two people who made our house a home.
+
+Growing up, I didn’t realize how much effort it takes to keep a family happy and together — but now I understand that behind everything peaceful in our lives was always both of you.
+
+From small arguments to shared laughter, from stressful days to happy celebrations, you’ve handled life side by side in your own imperfect but beautiful way.
+
+Thank you for being my constant support system, my comfort place, and the reason our family feels complete.
+
+Also, thank you for proving that partnership mostly means patience… and sometimes pretending to agree just to avoid another argument 😄.
+
+I’m really lucky to call you my parents.
+
+Always proud of you both.</p>
+          <p>With all our love❤️,</p>
+          <p>--Gungun and Risha</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with love <span class="heart">❤️</span></p>
+  </footer>
+
+  <!-- Music Control Button -->
+  <button id="music-control" class="music-control playing" aria-label="Toggle music">
+    <span class="music-icon">🎵</span>
+  </button>
+
+  <!-- Lightbox modal -->
+  <!-- Fullscreen gallery carousel -->
+  <div id="gallery-carousel" class="gallery-carousel" aria-hidden="true">
+    <button id="gc-close" class="gc-close" aria-label="Close">×</button>
+    <div class="gc-inner">
+      <div id="gc-left" class="gc-col"></div>
+      <div class="gc-main" id="gc-main"></div>
+      <div id="gc-right" class="gc-col"></div>
+    </div>
+  </div>
+
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lb-close" class="lb-close" aria-label="Close">×</button>
+    <div class="lb-inner">
+      <button id="lb-prev" class="lb-nav" aria-label="Previous">‹</button>
+      <div id="lb-media" class="lb-media"></div>
+      <button id="lb-next" class="lb-nav" aria-label="Next">›</button>
+    </div>
+  </div>
+
+  <!-- music removed per user's request -->
+
+  <script>
+    // Clear pause state on page refresh to ensure autoplay
+    if (!sessionStorage.getItem('bgAudioInitialized')) {
+      sessionStorage.removeItem('bgAudioState');
+      sessionStorage.setItem('bgAudioInitialized', 'true');
+    }
+  </script>
+  <script src="audio-player.js"></script>
+  <script src="script.js"></script>
+  <script src="spa.js"></script>
+</body>
+</html>
